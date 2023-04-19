@@ -18,16 +18,8 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                python3 hello.py
-                python3 hello.py --name=Rosa
-                '''
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
+                python3 app/hello.py
+                python3 app/hello.py --name=Rosa
                 '''
             }
         }
